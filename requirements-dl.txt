@@ -1,0 +1,11 @@
+-r requirements-ml.txt
+torch
+torchvision
+transformers
+datasets
+peft
+sentence-transformers
+faiss-cpu
+mlflow
+fastapi
+uvicorn

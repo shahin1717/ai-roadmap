@@ -1,0 +1,9 @@
+-r requirements-math.txt
+pandas
+seaborn
+scikit-learn
+xgboost
+lightgbm
+shap
+imbalanced-learn
+umap-learn

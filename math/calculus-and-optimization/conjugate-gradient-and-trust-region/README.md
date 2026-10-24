@@ -1,0 +1,23 @@
+# Conjugate Gradient and Trust Region
+
+> **Status:** planned. This topic has not been written yet.
+
+**Course:** [Calculus and Optimization](../README.md)
+
+## Learning goals
+
+## Prerequisites
+
+## Outline
+
+## Key intuition
+
+## Why this matters for AI/ML
+
+## Further reading
+
+See [resources.md](resources.md).
+
+---
+
+[← Previous: Newton and Quasi Newton Methods](../newton-and-quasi-newton-methods/README.md) | [Next: Constrained Optimization and KKT →](../constrained-optimization-and-kkt/README.md)

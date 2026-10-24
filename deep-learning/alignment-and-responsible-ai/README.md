@@ -1,0 +1,23 @@
+# Alignment and Responsible AI
+
+> **Status:** planned. This topic has not been written yet.
+
+**Course:** [Deep Learning](../README.md)
+
+## Learning goals
+
+## Prerequisites
+
+## Outline
+
+## Key intuition
+
+## Why this matters for AI/ML
+
+## Further reading
+
+See [resources.md](resources.md).
+
+---
+
+[← Previous: Retrieval Augmented Generation](../retrieval-augmented-generation/README.md) | [Next: Vision Transformers and Multimodal →](../vision-transformers-and-multimodal/README.md)

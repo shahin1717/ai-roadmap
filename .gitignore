@@ -1,0 +1,30 @@
+# Third-party material must never enter the repo (check_repo.py enforces this too)
+*.pdf
+*.docx
+*.pptx
+*.epub
+private_materials/
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# Data, weights, experiment logs (notebooks download data at runtime)
+data/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+mlruns/
+wandb/
+
+# Editors, OS, Obsidian
+.vscode/
+.idea/
+.obsidian/
+.DS_Store
+Thumbs.db
