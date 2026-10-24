@@ -21,23 +21,23 @@ Back to the [topic](../README.md).
 ## Matrices
 
 **6. Two views.** Let
-$$
+```math
 A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix}, \qquad \mathbf{x} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}.
-$$
+```
 (a) What is the shape of $A\mathbf{x}$? (b) Compute $A\mathbf{x}$ using the row view (dot products). (c) Compute it again using the column view (a linear combination of the columns) and check that you get the same answer.
 
 **7. Order matters.** Let
-$$
+```math
 A = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}, \qquad B = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}.
-$$
+```
 (a) Compute $AB$ and $BA$. Are they equal? (b) Matrix $B$ is a very simple machine. What does $B\mathbf{x}$ do to a vector $\mathbf{x} = (x_1, x_2)$? (c) A $2 \times 3$ matrix is multiplied by a $3 \times 4$ matrix. What is the shape of the product? Can you multiply a $3 \times 2$ matrix by a $3 \times 4$ matrix?
 
 ## Putting it together
 
 **8. A tiny neural network layer.** A layer computes $\mathbf{y} = \text{ReLU}(W\mathbf{x} + \mathbf{b})$, where ReLU replaces every negative number by $0$ and leaves the others unchanged. Let
-$$
+```math
 W = \begin{bmatrix} 1 & 0 & -1 \\ 2 & 1 & 0 \end{bmatrix}, \qquad
 \mathbf{b} = \begin{bmatrix} 1 \\ -10 \end{bmatrix}, \qquad
 \mathbf{x} = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix}.
-$$
-(a) What are the shapes of $\mathbf{x}$ and $\mathbf{y}$? (b) Compute $\mathbf{y}$. (c) Put two inputs side by side as the columns of a matrix $X = \begin{bmatrix} 3 & 0 \\ 2 & 1 \\ 1 & 2 \end{bmatrix}$. Compute $WX$, add $\mathbf{b}$ to each column, and apply ReLU. Which single matrix operation processed both inputs at once?
+```
+(a) What are the shapes of $\mathbf{x}$ and $\mathbf{y}$? (b) Compute $\mathbf{y}$. (c) Put two inputs side by side as the columns of a matrix $`X = \begin{bmatrix} 3 & 0 \\ 2 & 1 \\ 1 & 2 \end{bmatrix}`$. Compute $WX$, add $\mathbf{b}$ to each column, and apply ReLU. Which single matrix operation processed both inputs at once?

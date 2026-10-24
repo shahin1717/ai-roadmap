@@ -47,11 +47,11 @@ Check: $1\cdot(1,2) + 2\cdot(3,1) = (1,2) + (6,2) = (7,4)$. ✓
 ## 7. Order matters
 
 - (a)
-$$
+```math
 AB = \begin{bmatrix} 1\cdot0+2\cdot1 & 1\cdot1+2\cdot0 \\ 0\cdot0+1\cdot1 & 0\cdot1+1\cdot0 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\ 1 & 0 \end{bmatrix},
 \qquad
 BA = \begin{bmatrix} 0\cdot1+1\cdot0 & 0\cdot2+1\cdot1 \\ 1\cdot1+0\cdot0 & 1\cdot2+0\cdot1 \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ 1 & 2 \end{bmatrix}.
-$$
+```
 They are different, so $AB \ne BA$.
 - (b) $B\mathbf{x} = (x_2, x_1)$: it swaps the two coordinates (a reflection across the diagonal line).
 - (c) $(2\times3)(3\times4)$ gives a $2\times4$ matrix. A $3\times2$ matrix times a $3\times4$ matrix is **not** defined: the inner numbers, 2 and 3, do not match.
@@ -61,11 +61,11 @@ They are different, so $AB \ne BA$.
 - (a) $\mathbf{x}$ has 3 entries and $W$ has 2 rows, so $\mathbf{y}$ has 2 entries.
 - (b) $W\mathbf{x} = (1\cdot3 + 0\cdot2 + (-1)\cdot1,\ 2\cdot3 + 1\cdot2 + 0\cdot1) = (2, 8)$. Adding $\mathbf{b}$ gives $(3, -2)$. ReLU turns $-2$ into $0$, so $\mathbf{y} = (3, 0)$.
 - (c) The second column of $X$ is $(0,1,2)$, and $W(0,1,2) = (-2, 1)$, so
-$$
+```math
 WX = \begin{bmatrix} 2 & -2 \\ 8 & 1 \end{bmatrix}.
-$$
-Adding $\mathbf{b} = (1, -10)$ to each column gives $\begin{bmatrix} 3 & -1 \\ -2 & -9 \end{bmatrix}$, and ReLU gives
-$$
+```
+Adding $\mathbf{b} = (1, -10)$ to each column gives $`\begin{bmatrix} 3 & -1 \\ -2 & -9 \end{bmatrix}`$, and ReLU gives
+```math
 \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix}.
-$$
+```
 The first column matches part (b). One **matrix-matrix multiplication** processed both inputs at once, which is how real networks handle whole batches. (Many libraries store each example as a *row* instead of a column; the idea is the same, only the bookkeeping is flipped.)

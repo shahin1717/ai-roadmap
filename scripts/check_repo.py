@@ -7,6 +7,8 @@ Checks:
 - no folder name starts with a number
 - every topic is linked from its course README's study order
 - every relative link in Markdown files and notebook Markdown cells resolves
+- no bare `\\\\` (matrix row break) in math: GitHub's Markdown step eats one backslash,
+  so use a ```math fence for display math or $`...`$ for inline math instead
 """
 import json
 import re
@@ -19,6 +21,7 @@ COURSES = ["getting-started", "math/linear-algebra", "math/calculus-and-optimiza
 REQUIRED = ["README.md", "resources.md"]
 FORBIDDEN = {".pdf", ".docx", ".pptx", ".epub"}
 LINK = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
+SAFE_MATH = re.compile(r"```math\n.*?\n```|\$`.*?`\$", re.S)
 
 
 def tracked_files():
@@ -58,6 +61,9 @@ def main():
 
     for p in files:
         if p.is_file() and p.suffix in {".md", ".ipynb"}:
+            for n, line in enumerate(SAFE_MATH.sub("", markdown_sources(p)).splitlines(), 1):
+                if "\\\\" in line:
+                    errors.append(f"bare \\\\ in math (use a ```math fence or $`...`$): {p.relative_to(ROOT)}:{n}")
             for target in LINK.findall(markdown_sources(p)):
                 if re.match(r"^[a-z]+:", target) or target.startswith("#"):
                     continue

@@ -108,29 +108,29 @@ $$
 
 A **matrix** is a rectangular grid of numbers. A matrix $A$ with $m$ rows and $n$ columns is called "$m$ by $n$":
 
-$$
+```math
 A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix} \quad \text{is a } 3 \times 2 \text{ matrix.}
-$$
+```
 
 You can add two matrices of the same shape, or scale a matrix, entry by entry, just like vectors. The interesting operation is multiplying a matrix by a vector. Take
 
-$$
+```math
 A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \qquad \mathbf{x} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}.
-$$
+```
 
 There are two ways to compute $A\mathbf{x}$, and both are worth knowing.
 
 **Row view: a stack of dot products.** Each entry of the answer is the dot product of one row of $A$ with $\mathbf{x}$:
 
-$$
+```math
 A\mathbf{x} = \begin{bmatrix} 1\cdot 2 + 2\cdot 1 \\ 3\cdot 2 + 4\cdot 1 \end{bmatrix} = \begin{bmatrix} 4 \\ 10 \end{bmatrix}
-$$
+```
 
 **Column view: a linear combination.** The entries of $\mathbf{x}$ are the amounts, and the columns of $A$ are the ingredients:
 
-$$
+```math
 A\mathbf{x} = 2\begin{bmatrix} 1 \\ 3 \end{bmatrix} + 1\begin{bmatrix} 2 \\ 4 \end{bmatrix} = \begin{bmatrix} 4 \\ 10 \end{bmatrix}
-$$
+```
 
 Same answer, two stories. The row view is handy for computing; the column view is handy for understanding. It tells you that $A\mathbf{x}$ always lies among the combinations of the columns of $A$, an idea that returns in [vector spaces](../vector-spaces-and-subspaces/README.md).
 
@@ -142,17 +142,17 @@ The shapes must fit: an $m \times n$ matrix needs a vector with $n$ entries and 
 
 To multiply $A$ by $B$, apply the matrix-vector rule to each column of $B$. Entry in row $i$, column $j$ of $AB$ is the dot product of row $i$ of $A$ with column $j$ of $B$:
 
-$$
+```math
 \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}
 \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}
 =
 \begin{bmatrix} 2 & 1 \\ 1 & 0 \end{bmatrix}
-$$
+```
 
 Two rules to remember:
 
 - **Shapes.** $(m \times n)(n \times p)$ gives $m \times p$. The two inner numbers must match and then disappear.
-- **Order matters.** Swap the factors above and you get $\begin{bmatrix} 0 & 1 \\ 1 & 2 \end{bmatrix}$, a different matrix. Doing "A then B" is not the same as "B then A", just as putting on socks then shoes differs from shoes then socks. The full rules of matrix arithmetic (what *does* hold, such as grouping) come in [matrix operations and LU decomposition](../matrix-operations-and-lu-decomposition/README.md).
+- **Order matters.** Swap the factors above and you get $`\begin{bmatrix} 0 & 1 \\ 1 & 2 \end{bmatrix}`$, a different matrix. Doing "A then B" is not the same as "B then A", just as putting on socks then shoes differs from shoes then socks. The full rules of matrix arithmetic (what *does* hold, such as grouping) come in [matrix operations and LU decomposition](../matrix-operations-and-lu-decomposition/README.md).
 
 ## Why this matters for AI/ML
 

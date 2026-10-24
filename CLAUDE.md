@@ -28,7 +28,7 @@ Rules for anyone (human or AI) writing content in this repo.
 - Python code must run top to bottom. Keep math and ML notebooks CPU-friendly; mark GPU-heavy deep-learning notebooks "GPU recommended". Commit notebooks executed with small outputs.
 
 ## Documentation
-- GitHub-native Markdown only. Math as `$...$` and `$$...$$`. Diagrams as Mermaid or our own PNG/SVG in `assets/`.
+- GitHub-native Markdown only. Math as `$...$` and `$$...$$`. Anything containing `\\` (matrices, aligned equations) must use a ```` ```math ```` fence for display math or $`...`$ for inline math, because GitHub's Markdown step eats one backslash otherwise. Diagrams as Mermaid or our own PNG/SVG in `assets/`.
 - Relative links only for internal pages.
 - New topic: `python scripts/new_topic.py <course> <topic-name>`, then add the printed line to the course README.
 - Before every commit: run `python scripts/check_repo.py` and run any changed notebooks.
