@@ -1,6 +1,6 @@
 # Linear Algebra
 
-> **Status:** in progress. [Vectors and Matrices](vectors-and-matrices/README.md) is written; the other topics are planned and are being written one at a time.
+> **Status:** in progress. [Vectors and Matrices](vectors-and-matrices/README.md) and [Linear Equations and Gaussian Elimination](linear-equations-and-gaussian-elimination/README.md) are written; the other topics are planned and are being written one at a time.
 
 ## Prerequisites
 
