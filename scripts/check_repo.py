@@ -61,7 +61,7 @@ def main():
 
     for p in files:
         if p.is_file() and p.suffix in {".md", ".ipynb"}:
-            for n, line in enumerate(SAFE_MATH.sub("", markdown_sources(p)).splitlines(), 1):
+            for n, line in enumerate(SAFE_MATH.sub(lambda m: "\n" * m.group(0).count("\n"), markdown_sources(p)).splitlines(), 1):
                 if "\\\\" in line:
                     errors.append(f"bare \\\\ in math (use a ```math fence or $`...`$): {p.relative_to(ROOT)}:{n}")
             for target in LINK.findall(markdown_sources(p)):
