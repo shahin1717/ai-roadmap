@@ -175,4 +175,4 @@ Chapter pointers and free links are in [resources.md](resources.md).
 
 ---
 
-[← Previous: How to Use this Repo](../../../getting-started/how-to-use-this-repo/README.md) | [Next: Linear Equations and Gaussian Elimination →](../linear-equations-and-gaussian-elimination/README.md)
+[← Previous: Python Basics](../../../getting-started/python-basics/README.md) | [Next: Linear Equations and Gaussian Elimination →](../linear-equations-and-gaussian-elimination/README.md)

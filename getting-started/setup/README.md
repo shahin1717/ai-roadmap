@@ -20,4 +20,4 @@ See [resources.md](resources.md).
 
 ---
 
-[← Previous: back to the roadmap](../../README.md) | [Next: Python Basics →](../python-basics/README.md)
+[← Previous: How to Use this Repo](../how-to-use-this-repo/README.md) | [Next: Python Basics →](../python-basics/README.md)

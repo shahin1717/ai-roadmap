@@ -1042,4 +1042,4 @@ Chapter pointers and free links are in [resources.md](resources.md).
 
 ---
 
-[← Previous: Setup](../setup/README.md) | [Next: How to Use this Repo →](../how-to-use-this-repo/README.md)
+[← Previous: Setup](../setup/README.md) | [Next: Vectors and Matrices →](../../math/linear-algebra/vectors-and-matrices/README.md)

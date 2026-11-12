@@ -63,9 +63,9 @@ Study the topics in this order. Click a course to expand it.
 <details>
 <summary><b>🚀 Getting Started</b></summary>
 
-1. [Setup](getting-started/setup/README.md)
-2. [Python basics](getting-started/python-basics/README.md)
-3. [How to use this repo](getting-started/how-to-use-this-repo/README.md)
+1. [How to use this repo](getting-started/how-to-use-this-repo/README.md)
+2. [Setup](getting-started/setup/README.md)
+3. [Python basics](getting-started/python-basics/README.md)
 
 </details>
 

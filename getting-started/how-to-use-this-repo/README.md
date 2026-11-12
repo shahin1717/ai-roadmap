@@ -20,4 +20,4 @@ See [resources.md](resources.md).
 
 ---
 
-[← Previous: Python Basics](../python-basics/README.md) | [Next: Vectors and Matrices →](../../math/linear-algebra/vectors-and-matrices/README.md)
+[← Previous: back to the roadmap](../../README.md) | [Next: Setup →](../setup/README.md)
