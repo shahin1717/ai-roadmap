@@ -1,6 +1,6 @@
 # Exercises: Vectors and Matrices
 
-Eight problems, easy to harder. Try each on paper first, then check yourself in the [notebook](../notebook.ipynb) or with NumPy. Worked answers are in [solutions.md](solutions.md), so resist peeking until you have had a real go.
+Ten problems, easy to harder. Try each on paper first, then check yourself in the [notebook](../notebook.ipynb) or with NumPy. Worked answers are in [solutions.md](solutions.md). Give each problem a real attempt before you open them.
 
 Back to the [topic](../README.md).
 
@@ -41,3 +41,9 @@ W = \begin{bmatrix} 1 & 0 & -1 \\ 2 & 1 & 0 \end{bmatrix}, \qquad
 \mathbf{x} = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix}.
 ```
 (a) What are the shapes of $\mathbf{x}$ and $\mathbf{y}$? (b) Compute $\mathbf{y}$. (c) Put two inputs side by side as the columns of a matrix $`X = \begin{bmatrix} 3 & 0 \\ 2 & 1 \\ 1 & 2 \end{bmatrix}`$. Compute $WX$, add $\mathbf{b}$ to each column, and apply ReLU. Which single matrix operation processed both inputs at once?
+
+## Shapes and checking your work
+
+**9. Will it fit?** For each product, say whether it is defined and, if so, give the shape of the result. (a) $(4 \times 3)(3 \times 2)$. (b) $(2 \times 5)(2 \times 5)$. (c) $(1 \times 3)(3 \times 1)$. (d) $(3 \times 1)(1 \times 3)$. Which of these is a dot product in disguise?
+
+**10. Check by machine.** Use NumPy to confirm three of your earlier answers: (a) the vector $A\mathbf{x}$ from problem 6; (b) both products $AB$ and $BA$ from problem 7; (c) the cosine similarities of $\mathbf{d}_1$, $\mathbf{d}_2$, $\mathbf{d}_3$ with $\mathbf{q}$ from problem 5(b). Write a small function `cosine(a, b)` and reuse it for part (c).

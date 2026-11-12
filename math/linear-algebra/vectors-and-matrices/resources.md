@@ -19,6 +19,8 @@ Titles, authors, chapter pointers, and free links only. Items marked *(library)*
 
 ## Try
 
+- Ström, Åström & Akenine-Möller, *Immersive Linear Algebra* (free interactive book): <http://immersivemath.com/ila/index.html>. Drag the figures to see vectors, the dot product, and matrices change.
+- Khan Academy, *Linear algebra* (free course, good for extra practice problems): <https://www.khanacademy.org/math/linear-algebra>
 - NumPy, *Absolute Beginners* guide, for arrays and the `@` operator: <https://numpy.org/doc/stable/user/absolute_beginners.html>
 - Matplotlib, *Quick start guide*, for drawing arrows and plots: <https://matplotlib.org/stable/users/explain/quick_start.html>
 

@@ -28,7 +28,7 @@ A user's taste is also a vector in the same four dimensions. Ana's taste is `[2,
    F = [[1, 0, 1, 1],     # "excitement" = action + comedy + sci-fi
         [0, 1, 1, 0]]     # "warmth"     = romance + comedy
    ```
-   is $2 \times 4$. Compute `M @ F.T` to turn every movie into just two numbers, "excitement" and "warmth". (`F.T` flips the matrix so the shapes fit; the matrix operations topic explains it properly.) Then draw a scatter plot with one labelled point per movie. Which movies sit close together?
+   is $2 \times 4$. Compute `M @ F.T` to turn every movie into just two numbers, "excitement" and "warmth". (`F.T` is the transpose, which swaps rows and columns so that the shapes fit. The lesson's note on the transpose explains the idea.) Then draw a scatter plot with one labelled point per movie. Which movies sit close together?
 
 ## What to hand in
 

@@ -15,7 +15,7 @@ $$
 c + 3d = 7, \qquad 2c + d = 4.
 $$
 From the second, $d = 4 - 2c$. Put that in the first: $c + 12 - 6c = 7$, so $c = 1$ and $d = 2$.
-Check: $1\cdot(1,2) + 2\cdot(3,1) = (1,2) + (6,2) = (7,4)$. ✓
+Check: $1\cdot(1,2) + 2\cdot(3,1) = (1,2) + (6,2) = (7,4)$, as required.
 
 ## 3. Length
 
@@ -42,7 +42,7 @@ Check: $1\cdot(1,2) + 2\cdot(3,1) = (1,2) + (6,2) = (7,4)$. ✓
 
 - (a) $A$ is $3\times 2$ and $\mathbf{x}$ has 2 entries, so the result has 3 entries: a $3\times 1$ vector.
 - (b) Row view: $1\cdot 1 + 2\cdot(-1) = -1$, then $3 - 4 = -1$, then $5 - 6 = -1$. So $A\mathbf{x} = (-1, -1, -1)$.
-- (c) Column view: $1\cdot(1,3,5) + (-1)\cdot(2,4,6) = (1-2,\ 3-4,\ 5-6) = (-1,-1,-1)$. Same answer. ✓
+- (c) Column view: $1\cdot(1,3,5) + (-1)\cdot(2,4,6) = (1-2,\ 3-4,\ 5-6) = (-1,-1,-1)$. Same answer.
 
 ## 7. Order matters
 
@@ -54,7 +54,7 @@ BA = \begin{bmatrix} 0\cdot1+1\cdot0 & 0\cdot2+1\cdot1 \\ 1\cdot1+0\cdot0 & 1\cd
 ```
 They are different, so $AB \ne BA$.
 - (b) $B\mathbf{x} = (x_2, x_1)$: it swaps the two coordinates (a reflection across the diagonal line).
-- (c) $(2\times3)(3\times4)$ gives a $2\times4$ matrix. A $3\times2$ matrix times a $3\times4$ matrix is **not** defined: the inner numbers, 2 and 3, do not match.
+- (c) $(2\times3)(3\times4)$ gives a $2\times4$ matrix. A $3\times2$ matrix times a $3\times4$ matrix is not defined: the inner numbers, 2 and 3, do not match.
 
 ## 8. A tiny neural network layer
 
@@ -68,4 +68,50 @@ Adding $\mathbf{b} = (1, -10)$ to each column gives $`\begin{bmatrix} 3 & -1 \\ 
 ```math
 \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix}.
 ```
-The first column matches part (b). One **matrix-matrix multiplication** processed both inputs at once, which is how real networks handle whole batches. (Many libraries store each example as a *row* instead of a column; the idea is the same, only the bookkeeping is flipped.)
+The first column matches part (b). One matrix-matrix multiplication processed both inputs at once, which is how real networks handle whole batches. (Many libraries store each example as a *row* instead of a column; the idea is the same, only the bookkeeping is flipped.)
+
+## 9. Will it fit?
+
+- (a) The inner numbers are 3 and 3, so it is defined, and the result is $4 \times 2$.
+- (b) The inner numbers are 5 and 2, so it is not defined.
+- (c) The inner numbers are 3 and 3, so it is defined, and the result is $1 \times 1$: a single number. A row times a column is exactly a dot product, which is why the dot product is sometimes written $\mathbf{v}^\top\mathbf{w}$.
+- (d) The inner numbers are 1 and 1, so it is defined, and the result is $3 \times 3$. A column times a row gives a whole grid with one entry for every pair of entries, so it is not a dot product.
+
+## 10. Check by machine
+
+```python
+import numpy as np
+
+# (a) problem 6
+A = np.array([[1, 2], [3, 4], [5, 6]])
+x = np.array([1, -1])
+print(A @ x)
+
+# (b) problem 7
+A2 = np.array([[1, 2], [0, 1]])
+B2 = np.array([[0, 1], [1, 0]])
+print(A2 @ B2)
+print(B2 @ A2)
+
+# (c) problem 5(b)
+def cosine(a, b):
+    """Cosine similarity: the dot product divided by both lengths."""
+    return a @ b / (np.linalg.norm(a) * np.linalg.norm(b))
+
+q = np.array([3, 1])
+for name, d in [("d1", np.array([6, 2])), ("d2", np.array([1, 3])), ("d3", np.array([-3, -1]))]:
+    print(name, round(cosine(q, d), 3))
+```
+
+```text
+[-1 -1 -1]
+[[2 1]
+ [1 0]]
+[[0 1]
+ [1 2]]
+d1 1.0
+d2 0.6
+d3 -1.0
+```
+
+The numbers agree with the pencil answers: $A\mathbf{x} = (-1,-1,-1)$, the two products differ, and the cosines are $1$, $0.6$, and $-1$. Rounding to three places hides tiny floating-point errors such as $0.9999999999999999$.
