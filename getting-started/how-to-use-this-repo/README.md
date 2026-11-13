@@ -242,7 +242,7 @@ A small exercise to find your way around.
 1. Open the [Python Basics](../python-basics/README.md) lesson and scroll to the bottom. Find the **Previous / Next** links.
 2. In the same topic, open `notebook.ipynb`, and find the **Open in Colab** badge at the very top.
 3. Open `exercises/problems.md` and `exercises/solutions.md` side by side. Notice that they are separate files.
-4. Open the [Linear Algebra study order](../../math/linear-algebra/README.md) and find the first topic. Then open one later topic (try [Eigenvalues and Eigenvectors](../../math/linear-algebra/eigenvalues-and-eigenvectors/README.md)). Read the status line at the top: that is what a planned topic looks like.
+4. Open the [Linear Algebra study order](../../math/linear-algebra/README.md) and find the first topic. Then open a topic from a course that has not been written yet (try [Limits and Continuity](../../math/calculus-and-optimization/limits-and-continuity/README.md)). Read the status line at the top: that is what a planned topic looks like.
 5. Open the [Vectors and Matrices](../../math/linear-algebra/vectors-and-matrices/README.md) lesson on GitHub and find a formula with a vector or a matrix in it. Check that the symbols are drawn properly, and find the matching entries in the table in section 6.
 
 <details>
@@ -251,7 +251,7 @@ A small exercise to find your way around.
 1. Every topic ends with a footer such as `← Previous: ... | Next: ... →`.
 2. The badge is the first line of the notebook, and it opens the same notebook in Colab.
 3. Solutions live in their own file so that you cannot read them by accident.
-4. The first topic of Linear Algebra is Vectors and Matrices, and it is complete. The later one starts with a line saying its status is planned, and has empty headings.
+4. The first topic of Linear Algebra is Vectors and Matrices, and it is complete. The other one starts with a line saying its status is planned, and has empty headings.
 5. Formulas appear as symbols, not as `$...$` text. If you see dollar signs, switch to the browser view.
 
 </details>
