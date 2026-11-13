@@ -1,6 +1,6 @@
 # Calculus and Optimization
 
-> **Status:** planned. Topics are being written one at a time.
+> **Status:** in progress. Topics are written one at a time, in study order. A topic page that starts with "Status: planned" has not been written yet.
 
 ## Prerequisites
 
