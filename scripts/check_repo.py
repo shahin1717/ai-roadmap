@@ -25,7 +25,8 @@ SAFE_MATH = re.compile(r"```math\n.*?\n```|\$`.*?`\$", re.S)
 
 
 def tracked_files():
-    return [p for p in ROOT.rglob("*") if ".git" not in p.relative_to(ROOT).parts]
+    return [p for p in ROOT.rglob("*")
+            if not any(part.startswith(".") for part in p.relative_to(ROOT).parts)]
 
 
 def markdown_sources(path):
